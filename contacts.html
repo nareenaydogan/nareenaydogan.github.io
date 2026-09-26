@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - My Website</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+    <style>
+        .fonts {
+            font-family: 'Playfair Display', serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #F7F5F0; /* Soft warm nude background */
+            color: #3A3532;
+            line-height: 1.6;
+        }
+
+        /* Header matching your layout */
+        header {
+            background: #c0b4a9;
+            color: #fff;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: #fff;
+            margin-left: 20px;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #6c6f50;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(rgba(247, 245, 240, 0.75), rgba(247, 245, 240, 0.9)), url('your-background-image.jpg') no-repeat center center/cover;
+            padding: 60px 20px;
+            border-bottom: 1px solid #E6E2D8;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero-tag {
+            color: #8C7A6B;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+
+        .hero-section h1 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: #2C2623;
+            margin-bottom: 8px;
+        }
+
+        .hero-section p {
+            color: #6E655F;
+            font-size: 1rem;
+            font-weight: 300;
+        }
+
+        /* Main Contact Grid Layout (Kept centered and compact) */
+        .contact-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px 60px 20px;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        @media (max-width: 768px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .hero-section h1 {
+                font-size: 1.8rem;
+            }
+        }
+
+        /* Compact Form Box Styles */
+        .contact-form-box {
+            background-color: #EFECE6; 
+            padding: 28px;
+            border-radius: 8px;
+            border: 1px solid #E2DCD2;
+        }
+
+        .contact-form-box h2 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+            color: #2C2623;
+            letter-spacing: 0.5px;
+        }
+
+        .form-group {
+            margin-bottom: 14px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 11px 14px;
+            background-color: #F7F5F0;
+            border: 1px solid #DCD5CB;
+            border-radius: 4px;
+            color: #3A3532;
+            font-size: 0.9rem;
+        }
+
+        input::placeholder, textarea::placeholder {
+            color: #9E958C;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #8C7A6B;
+            background-color: #FFFFFF;
+        }
+
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        button[type="submit"] {
+            background-color: #3A3532;
+            color: #F7F5F0;
+            font-weight: 500;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #524A45;
+        }
+
+        /* Info Side Styles */
+        .contact-info-box {
+            padding-top: 5px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 22px;
+            color: #6E655F;
+            font-size: 0.9rem;
+        }
+
+        .info-item span.icon {
+            margin-right: 12px;
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        .info-item a {
+            color: #2C2623;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .info-item a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <a href="index.html" class="logo">
+            <img src="logo.png" alt="Logo" style="height: 80px; width: auto; mix-blend-mode:multiply;">
+        </a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="opportunities.html">Opportunities</a>
+            <a href="contacts.html" class="active">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="hero-content">
+            <div class="hero-tag fonts">Contact</div>
+            <h1 class="fonts">START YOUR INVESTMENT TODAY</h1>
+            <p class="fonts">See it grow with every drop</p>
+        </div>
+    </div>
+
+
+    <div class="contact-container">
+        
+        <!-- Message box -->
+        <div class="contact-form-box">
+            <h2 class="fonts">SEND A MESSAGE</h2>
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Full name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="tel" name="phone" placeholder="Phone (optional)">
+                </div>
+                <div class="form-group">
+                    <textarea name="message" placeholder="Message..." required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+
+        <!-- Right: Contact Details -->
+        <div class="contact-info-box">
+            <div class="info-item">
+                <span class="icon">✉️</span>
+                <div><a href="mailto:inquiries@yourdomain.com">inquiries@yourdomain.com</a></div>
+            </div>
+            <div class="info-item">
+                <span class="icon">✨</span>
+                <div>Join the Club</div>
+            </div>
+            <div class="info-item">
+                <span class="icon">📍</span>
+                <div>addy?<br></div>
+            </div>
+            <div class="info-item">
+                <span class="icon">🕒</span>
+                <div>Members: 24/7 access<br>Office & tours: Mon–Sat, 9am–6pm</div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
