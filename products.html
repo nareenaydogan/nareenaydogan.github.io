@@ -1,0 +1,311 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products</title>
+
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+    <style>
+        .fonts {
+            font-family: 'Playfair Display', serif;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: #c0b4a9;
+            color: #fff;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo img {
+            height: 70px;
+            width: auto;
+            mix-blend-mode: multiply;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 1rem;
+        }
+
+        nav a:hover {
+            color: #6c6f50;
+        }
+
+        .page-title {
+            text-align: center;
+            padding: 60px 20px 35px;
+        }
+
+        .page-title h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+        }
+
+        .page-title p {
+            color: #777;
+            font-size: 1.1rem;
+        }
+
+        .products {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto 60px;
+        }
+
+        .product-section {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            background: #fff;
+            padding: 40px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+        }
+
+        .product-section:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .product-image {
+            flex: 1;
+            min-width: 0;
+            height: 320px;
+            background: #e9e5e0;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .product-info {
+            flex: 1;
+        }
+
+        .product-info h2 {
+            font-size: 2rem;
+            margin-top: 0;
+            color: #6c6f50;
+        }
+
+        .product-info p {
+            line-height: 1.8;
+            color: #666;
+        }
+
+        .product-info ul {
+            line-height: 2;
+            color: #666;
+            padding-left: 20px;
+        }
+
+        .product-button {
+            display: inline-block;
+            background: #6c6f50;
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 4px;
+            margin-top: 10px;
+            transition: background 0.3s;
+        }
+
+        .product-button:hover {
+            background: #50533b;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
+            }
+
+            nav a {
+                margin-left: 0;
+            }
+
+            .page-title h1 {
+                font-size: 2rem;
+            }
+
+            .product-section,
+            .product-section:nth-child(even) {
+                flex-direction: column;
+                padding: 25px;
+                gap: 25px;
+            }
+
+            .product-image {
+                width: 100%;
+                flex: auto;
+                height: 240px;
+            }
+
+            .product-info {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="logo">
+            <img src="logo.png" alt="Logo">
+        </a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="opportunities.html">Opportunities</a>
+            <a href="contacts.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="page-title">
+        <h1 class="fonts">Our Products</h1>
+        <p class="fonts">Invest in development worth every drop.</p>
+    </div>
+
+    <main class="products">
+
+        <!-- PRODUCT 1 -->
+        <section class="product-section">
+            <div class="product-image">
+                <img src="product1.jpg" alt="Product 1">
+            </div>
+
+            <div class="product-info">
+                <h2 class="fonts">Product One</h2>
+                <p>
+                    Introduce your first product here. Describe what makes
+                    it unique and how it contributes to sustainable development.
+                </p>
+                <ul>
+                    <li>Key benefit or feature</li>
+                    <li>Long-term value</li>
+                    <li>Sustainable development</li>
+                </ul>
+                <a href="#" class="product-button">Learn More</a>
+            </div>
+        </section>
+
+        <!-- PRODUCT 2 -->
+        <section class="product-section">
+            <div class="product-image">
+                <img src="product2.jpg" alt="Product 2">
+            </div>
+
+            <div class="product-info">
+                <h2 class="fonts">Product Two</h2>
+                <p>
+                    Introduce your second product here. Explain its purpose,
+                    features, and the value it provides.
+                </p>
+                <ul>
+                    <li>Key benefit or feature</li>
+                    <li>Long-term value</li>
+                    <li>Innovative solutions</li>
+                </ul>
+                <a href="#" class="product-button">Learn More</a>
+            </div>
+        </section>
+
+        <!-- PRODUCT 3 -->
+        <section class="product-section">
+            <div class="product-image">
+                <img src="product3.jpg" alt="Product 3">
+            </div>
+
+            <div class="product-info">
+                <h2 class="fonts">Product Three</h2>
+                <p>
+                    Introduce your third product here. Highlight what
+                    distinguishes it from the other products.
+                </p>
+                <ul>
+                    <li>Key benefit or feature</li>
+                    <li>Long-term value</li>
+                    <li>Environmental impact</li>
+                </ul>
+                <a href="#" class="product-button">Learn More</a>
+            </div>
+        </section>
+
+        <!-- PRODUCT 4 -->
+        <section class="product-section">
+            <div class="product-image">
+                <img src="product4.jpg" alt="Product 4">
+            </div>
+
+            <div class="product-info">
+                <h2 class="fonts">Product Four</h2>
+                <p>
+                    Introduce your fourth product here. Describe its
+                    applications and its potential.
+                </p>
+                <ul>
+                    <li>Key benefit or feature</li>
+                    <li>Long-term value</li>
+                    <li>Reliable development</li>
+                </ul>
+                <a href="#" class="product-button">Learn More</a>
+            </div>
+        </section>
+
+        <!-- PRODUCT 5 -->
+        <section class="product-section">
+            <div class="product-image">
+                <img src="product5.jpg" alt="Product 5">
+            </div>
+
+            <div class="product-info">
+                <h2 class="fonts">Product Five</h2>
+                <p>
+                    Introduce your fifth product here. Finish by explaining
+                    its importance and contribution to your overall vision.
+                </p>
+                <ul>
+                    <li>Key benefit or feature</li>
+                    <li>Long-term value</li>
+                    <li>Built for generations</li>
+                </ul>
+                <a href="#" class="product-button">Learn More</a>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
