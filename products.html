@@ -172,6 +172,68 @@
                 width: 100%;
             }
         }
+
+
+        /* Responsive adjustments */
+header {
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+header .logo img {
+    height: clamp(40px, 6vw, 80px) !important;
+}
+
+nav a {
+    font-size: clamp(0.65rem, 1.2vw, 1rem);
+    margin-left: clamp(5px, 1vw, 20px);
+}
+
+.container {
+    padding: clamp(15px, 3vw, 40px);
+    margin: clamp(20px, 4vw, 50px) auto;
+}
+
+.container h1 {
+    font-size: clamp(1.3rem, 3vw, 2rem);
+}
+
+.container p {
+    font-size: clamp(0.8rem, 1.5vw, 1.1rem);
+}
+
+.button-group {
+    gap: clamp(8px, 2vw, 20px);
+    padding: 0 clamp(5px, 2vw, 20px);
+}
+
+.btn-outline {
+    font-size: clamp(0.7rem, 1.2vw, 1rem);
+    padding: clamp(8px, 1.5vw, 15px) clamp(10px, 2vw, 30px);
+}
+
+/* Smaller screens */
+@media (max-width: 600px) {
+    header {
+        justify-content: center;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    nav a {
+        margin-left: 0;
+    }
+
+    .button-group {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
     </style>
 </head>
 
